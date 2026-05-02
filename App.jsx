@@ -17,6 +17,11 @@ import {
   Briefcase
 } from 'lucide-react';
 
+import LogoImg from './Logo.jpg';
+import DrNaiduImg from './DR Naidu.jpg';
+import DrVidyaImg from './Vidya.jpg';
+import ShekarImg from './Shekar.jpg';
+import BilalImg from './Bilal.jpg';
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -117,40 +122,28 @@ const App = () => {
     { 
       name: "Dr. DY Naidu", 
       role: "MBBS, AFIH", 
-      img: "https://images.pexels.com/photos/4173239/pexels-photo-4173239.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: DrNaiduImg,
       specialty: "Chief Medical Advisor"
     },
     { 
       name: "Dr. V Vidya", 
       role: "MBBS", 
-      img: "https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: DrVidyaImg,
       specialty: "General Physician"
     },
     { 
       name: "Shekar Ramagiri", 
       role: "BPT", 
-      img: "https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: ShekarImg,
       specialty: "Sr. Physiotherapist"
     },
     { 
       name: "MD. Bilal", 
       role: "MPT (Sports), MIAP", 
-      img: "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: BilalImg,
       specialty: "Sports Physiotherapist"
     }
   ];
-
-  const LogoIcon = ({ size = 60 }) => (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="90" height="90" stroke="#1E3A8A" strokeWidth="4" />
-      <path d="M78 50C78 34.54 65.46 22 50 22C44 22 38.5 24 34 27.5" stroke="#1E3A8A" strokeWidth="5" strokeLinecap="round" />
-      <path d="M38 72C46 68 62 68 74 74" stroke="#1E3A8A" strokeWidth="4" strokeLinecap="round" />
-      <path d="M22 50C22 65.46 34.54 78 50 78C56 78 61.5 76 66 72.5" stroke="#84CC16" strokeWidth="5" strokeLinecap="round" />
-      <path d="M62 28C54 32 38 32 26 26" stroke="#84CC16" strokeWidth="4" strokeLinecap="round" />
-      <rect x="44" y="32" width="12" height="36" fill="#FF0000" />
-      <rect x="32" y="44" width="36" height="12" fill="#FF0000" />
-    </svg>
-  );
 
   return (
     <div className="min-h-screen bg-white font-sans selection:bg-[#84cc16] selection:text-[#0a1931]">
@@ -172,9 +165,9 @@ const App = () => {
       <nav className="bg-white sticky top-0 z-50 py-4 shadow-md">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <LogoIcon size={54} />
+            <img src={LogoImg} alt="Square Health Logo" className="h-14 w-auto object-contain" />
             <div className="flex flex-col">
-              <div className="text-2xl font-black leading-none text-[#0a1931] tracking-tighter">SQUARE</div>
+              <div className="text-2xl font-black leading-none text-[#0a1931] tracking-tighter uppercase">SQUARE</div>
               <div className="text-[10px] font-bold text-gray-700 leading-tight">Medical & Health Care Services</div>
               <div className="text-[9px] font-bold text-[#1E3A8A] tracking-wider mt-0.5">Run by EX-SERVICEMEN</div>
             </div>
@@ -222,13 +215,13 @@ const App = () => {
               </div>
             </div>
             <div className="flex-1">
-              <h2 className="text-[#0a1931] text-4xl font-bold mb-8 leading-snug">Square Medical and Health Care Services</h2>
-              <div className="space-y-6 text-gray-700 leading-relaxed">
+              <h2 className="text-[#0a1931] text-4xl font-bold mb-8 leading-snug uppercase tracking-tight">Square Medical and Health Care Services</h2>
+              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
                 <p><strong>Square Medical and Health Care Services</strong> is a trusted, Indian Armed Forces veteran-led home healthcare company, dedicated to delivering professional, compassionate, and reliable Health care services directly at the doorstep of clients across Hyderabad and Secunderabad.</p>
                 <p>Founded and run by ex-servicemen who have served with honour in the Indian Armed Forces for over 20 years, Square Medical and Health Care Services brings the same values of discipline, integrity, commitment, and selfless service into the healthcare sector.</p>
                 <p>With more than 10 years of hands-on experience in home health care services, we provide comprehensive home healthcare services in the comfort and privacy of your home.</p>
                 <p>What truly sets us apart is the unique combination of military discipline with compassionate care. The team treats every patient like family, ensuring timely service, strict hygiene protocols, and complete accountability.</p>
-                <p className="text-[#1E3A8A] font-bold text-lg">Proudly serving for your good health is our priority.</p>
+                <p className="text-[#1E3A8A] font-bold text-xl uppercase tracking-tight">Proudly serving for your good health is our priority.</p>
               </div>
             </div>
           </div>
@@ -259,7 +252,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* B2B Services */}
+      {/* B2B Section */}
       <section id="b2b-section" className="py-24 bg-[#0a1931] relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16 max-w-4xl mx-auto">
@@ -293,7 +286,7 @@ const App = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {experts.map((member, i) => (
               <div key={i} className="text-center group">
-                <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-gray-100 shadow-xl group-hover:border-[#1E3A8A] transition-all duration-300">
+                <div className="relative w-52 h-52 mx-auto mb-8 rounded-full overflow-hidden border-4 border-gray-100 shadow-xl group-hover:border-[#1E3A8A] transition-all duration-300">
                   <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" />
                 </div>
                 <h4 className="font-black text-[#0a1931] text-xl uppercase tracking-tighter">{member.name}</h4>
@@ -309,7 +302,7 @@ const App = () => {
       <footer id="contact" className="bg-[#050a14] py-24 text-center">
         <div className="container mx-auto px-6">
           <div className="flex justify-center mb-10">
-            <LogoIcon size={80} />
+             <img src={LogoImg} alt="Square Health Logo" className="h-20 w-auto object-contain brightness-0 invert" />
           </div>
           <div className="text-white text-3xl font-black mb-4 uppercase tracking-tighter leading-none">
             SQUARE <span className="text-gray-400">Medical & Health</span>
