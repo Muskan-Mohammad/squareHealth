@@ -17,11 +17,14 @@ import {
   Briefcase
 } from 'lucide-react';
 
+
 import LogoImg from './Logo.jpg';
 import DrNaiduImg from './DR Naidu.jpg';
-import DrVidyaImg from './Vidya.jpg';
+import VidyaImg from './Vidya.jpg';
 import ShekarImg from './Shekar.jpg';
 import BilalImg from './Bilal.jpg';
+
+
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -126,19 +129,19 @@ const App = () => {
       specialty: "Chief Medical Advisor"
     },
     { 
-      name: "Dr. V Vidya", 
+      name: "Vidya", 
       role: "MBBS", 
-      img: DrVidyaImg,
+      img: VidyaImg,
       specialty: "General Physician"
     },
     { 
-      name: "Shekar Ramagiri", 
+      name: "Shekar", 
       role: "BPT", 
       img: ShekarImg,
       specialty: "Sr. Physiotherapist"
     },
     { 
-      name: "MD. Bilal", 
+      name: "Bilal", 
       role: "MPT (Sports), MIAP", 
       img: BilalImg,
       specialty: "Sports Physiotherapist"
@@ -165,7 +168,7 @@ const App = () => {
       <nav className="bg-white sticky top-0 z-50 py-4 shadow-md">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src={LogoImg} alt="Square Health Logo" className="h-14 w-auto object-contain" />
+            <img src={LogoImg} alt="Square Health Logo" className="h-12 w-auto object-contain rounded" />
             <div className="flex flex-col">
               <div className="text-2xl font-black leading-none text-[#0a1931] tracking-tighter uppercase">SQUARE</div>
               <div className="text-[10px] font-bold text-gray-700 leading-tight">Medical & Health Care Services</div>
@@ -208,7 +211,7 @@ const App = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-20 items-center">
             <div className="flex-1 relative">
-              <img src="https://images.pexels.com/photos/5998474/pexels-photo-5998474.jpeg?auto=compress&cs=tinysrgb&w=800" className="rounded-lg shadow-2xl" alt="About Us" />
+              <img src="https://images.pexels.com/photos/5998474/pexels-photo-5998474.jpeg?auto=compress&cs=tinysrgb&w=800" className="rounded-lg shadow-2xl border-4 border-gray-50" alt="About Us" />
               <div className="absolute -bottom-8 -left-8 bg-[#FF0000] p-10 rounded-lg text-white text-center shadow-2xl">
                 <div className="text-5xl font-black">20+</div>
                 <div className="text-[10px] font-black uppercase tracking-[0.2em] mt-2">Years of Valor</div>
@@ -216,12 +219,12 @@ const App = () => {
             </div>
             <div className="flex-1">
               <h2 className="text-[#0a1931] text-4xl font-bold mb-8 leading-snug uppercase tracking-tight">Square Medical and Health Care Services</h2>
-              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+              <div className="space-y-6 text-gray-700 leading-relaxed text-lg text-justify">
                 <p><strong>Square Medical and Health Care Services</strong> is a trusted, Indian Armed Forces veteran-led home healthcare company, dedicated to delivering professional, compassionate, and reliable Health care services directly at the doorstep of clients across Hyderabad and Secunderabad.</p>
                 <p>Founded and run by ex-servicemen who have served with honour in the Indian Armed Forces for over 20 years, Square Medical and Health Care Services brings the same values of discipline, integrity, commitment, and selfless service into the healthcare sector.</p>
                 <p>With more than 10 years of hands-on experience in home health care services, we provide comprehensive home healthcare services in the comfort and privacy of your home.</p>
                 <p>What truly sets us apart is the unique combination of military discipline with compassionate care. The team treats every patient like family, ensuring timely service, strict hygiene protocols, and complete accountability.</p>
-                <p className="text-[#1E3A8A] font-bold text-xl uppercase tracking-tight">Proudly serving for your good health is our priority.</p>
+                <p className="text-[#1E3A8A] font-bold text-xl uppercase tracking-tight pt-4">Proudly serving for your good health is our priority.</p>
               </div>
             </div>
           </div>
@@ -236,13 +239,13 @@ const App = () => {
             <div className="h-1.5 w-24 bg-[#1E3A8A] mx-auto mb-6"></div>
             <p className="text-gray-600 text-lg font-medium">Square Health Care Services offers a complete range of professional healthcare solutions at your doorstep, including:</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {homeServices.map((service) => (
               <div key={service.id} className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col">
-                <div className="h-56 overflow-hidden relative">
+                <div className="h-60 overflow-hidden relative">
                   <img src={service.img} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                 </div>
-                <div className="p-8 flex-1 flex flex-col">
+                <div className="p-8 flex-1 flex flex-col justify-center">
                   <h3 className="text-xl font-bold text-[#0a1931] mb-3 uppercase tracking-tight leading-tight">{service.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{service.desc}</p>
                 </div>
@@ -267,7 +270,7 @@ const App = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1931] via-[#0a1931cc] to-transparent"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-6">
                   <h3 className="text-white font-bold text-lg mb-2 leading-tight uppercase tracking-tight">{service.title}</h3>
-                  <p className="text-gray-400 text-[10px] uppercase font-bold tracking-widest">{service.desc.substring(0, 40)}...</p>
+                  <p className="text-gray-400 text-[10px] uppercase font-bold tracking-widest line-clamp-2">{service.desc}</p>
                 </div>
               </div>
             ))}
@@ -278,15 +281,15 @@ const App = () => {
       {/* Experts Section */}
       <section id="team" className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-[#0a1931] text-4xl font-black mb-4 uppercase tracking-tighter">Medical Experts & Staff</h2>
             <div className="h-1.5 w-24 bg-[#1E3A8A] mx-auto mb-4"></div>
             <p className="text-gray-500 font-bold uppercase text-xs tracking-widest">Led by Qualified Professionals</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
             {experts.map((member, i) => (
               <div key={i} className="text-center group">
-                <div className="relative w-52 h-52 mx-auto mb-8 rounded-full overflow-hidden border-4 border-gray-100 shadow-xl group-hover:border-[#1E3A8A] transition-all duration-300">
+                <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-gray-100 shadow-xl group-hover:border-[#1E3A8A] transition-all duration-300">
                   <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" />
                 </div>
                 <h4 className="font-black text-[#0a1931] text-xl uppercase tracking-tighter">{member.name}</h4>
@@ -302,7 +305,7 @@ const App = () => {
       <footer id="contact" className="bg-[#050a14] py-24 text-center">
         <div className="container mx-auto px-6">
           <div className="flex justify-center mb-10">
-             <img src={LogoImg} alt="Square Health Logo" className="h-20 w-auto object-contain brightness-0 invert" />
+             <img src={LogoImg} alt="Square Health Logo" className="h-20 w-auto object-contain rounded brightness-0 invert" />
           </div>
           <div className="text-white text-3xl font-black mb-4 uppercase tracking-tighter leading-none">
             SQUARE <span className="text-gray-400">Medical & Health</span>
