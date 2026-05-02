@@ -9,8 +9,6 @@ import VidyaImg from './Vidya.jpg';
 import ShekarImg from './Shekar.jpg';
 import BilalImg from './Bilal.jpg';
 
-
-
 // WhatsApp Logo SVG
 const WhatsAppIcon = ({ size = 24, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -69,10 +67,9 @@ const App = () => {
         <WhatsAppIcon size={32} />
       </a>
 
-      {/* Top Bar - High Width previous navy color bar */}
+      {/* Top Bar */}
       <div className="bg-[#0a1931] text-white py-5 md:py-7">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-6">
-          {/* Contact Info Centered/Spread */}
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="flex items-center gap-4 group">
               <div className="w-10 h-10 bg-[#eab308] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
@@ -95,7 +92,6 @@ const App = () => {
       <nav className="bg-white sticky top-0 z-50 py-4 shadow-sm border-b">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            {/* Logo remains large */}
             <img src={LogoImg} alt="Square Health Logo" className="h-24 w-auto object-contain" />
           </div>
           <div className="hidden lg:flex gap-12 font-bold text-[15px] text-[#0a1931] uppercase tracking-wide">
@@ -107,7 +103,7 @@ const App = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section id="home" className="relative h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1600" className="w-full h-full object-cover" alt="Hero Background" />
@@ -145,16 +141,13 @@ const App = () => {
                   <strong>Square Medical and Health Care Services</strong> is a trusted, Indian Armed Forces veteran-led home healthcare company, dedicated to delivering professional, compassionate, and reliable Health care services directly at the doorstep of clients across Hyderabad and Secunderabad.
                 </p>
                 <p>
-                  Founded and run by ex-servicemen who have served with honour in the Indian Armed Forces for over 20 years, Square Medical and Health Care Services brings the same values of discipline, integrity, commitment, and selfless service into the healthcare sector. Their leadership skills and high standards of responsibility have helped create a healthcare service that patients and families can truly depend on.
+                  Founded and run by ex-servicemen who have served with honour in the Indian Armed Forces for over 20 years, Square Medical and Health Care Services brings the same values of discipline, integrity, commitment, and selfless service into the healthcare sector.
                 </p>
                 <p>
                   With more than 10 years of hands-on experience in home health care services, we provide comprehensive home healthcare services in the comfort and privacy of your home.
                 </p>
                 <p>
                   What truly sets Square Medical and Health Care Services apart is the unique combination of military discipline with compassionate care. The team treats every patient like family, ensuring timely service, strict hygiene protocols, transparent communication, and complete accountability — values deeply ingrained from their years of service in the Indian Armed Forces.
-                </p>
-                <p>
-                  Whether you need short-term recovery support, long-term elderly care, or preventive corporate wellness programs, Square Medical and Health Care Services stands ready to deliver excellence in healthcare — right at your doorstep.
                 </p>
                 <p className="text-[#1E3A8A] font-bold text-xl uppercase tracking-tight pt-4">Proudly serving for your good health is our priority.</p>
               </div>
@@ -163,7 +156,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services */}
       <section id="home-services" className="py-24 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 max-w-4xl mx-auto">
@@ -236,7 +229,6 @@ const App = () => {
       <footer id="contact" className="bg-[#050a14] py-24 text-center">
         <div className="container mx-auto px-6 text-center">
           <div className="flex justify-center mb-12">
-             {/* Footer Logo: Large size and correctly visible */}
              <img src={LogoImg} alt="Square Health Logo" className="h-32 w-auto object-contain rounded-lg shadow-xl" />
           </div>
           <p className="text-[#84CC16] font-black italic text-xl mb-12 italic">"We Served the Nation... Now We Service the People..."</p>
@@ -246,7 +238,7 @@ const App = () => {
             <button onClick={() => handleNavClick('b2b-section')} className="hover:text-white transition border-b border-transparent hover:border-white">Corporate</button>
           </div>
           <div className="text-gray-600 text-[11px] font-bold uppercase tracking-widest border-t border-white/10 pt-10">
-            &copy; 2026 Square Medical and Health Care Services. All Rights Reserved.
+            &copy; Since 2020 Square Medical and Health Care Services. All Rights Reserved.
           </div>
         </div>
       </footer>
