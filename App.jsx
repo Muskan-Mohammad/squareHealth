@@ -198,9 +198,8 @@ const App = () => {
       {/* Footer */}
       <footer id="contact" className="bg-[#050a14] py-20 text-center">
         <div className="container mx-auto px-6">
-          <div className="flex justify-center mb-12">
-             {/* Footer Logo Increased Size */}
-             <img src={LogoImg} alt="Square Health Logo" className="h-28 w-auto object-contain brightness-0 invert" />
+         <div className="flex justify-center mb-12">
+             <img src={LogoImg} alt="Square Health Logo" className="h-32 w-auto object-contain rounded-lg" />
           </div>
           <div className="text-white text-3xl font-black mb-12 uppercase tracking-widest">
             SQUARE <span className="text-gray-400 font-light">MEDICAL & HEALTH</span>
