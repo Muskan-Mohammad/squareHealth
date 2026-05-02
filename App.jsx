@@ -159,7 +159,7 @@ const App = () => {
           </div>
           <div className="flex items-center gap-2">
             <Phone size={14} className="text-[#84CC16]" />
-            <span>+91 9963434353</span>
+            <span>+917729837756</span>
           </div>
         </div>
       </div>
