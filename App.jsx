@@ -8,7 +8,12 @@ import DrNaiduImg from './DR Naidu.jpg';
 import VidyaImg from './Vidya.jpg';
 import ShekarImg from './Shekar.jpg';
 import BilalImg from './Bilal.jpg';
-
+import Bedside from './Bedsideattendant.jpeg';
+import DocHome from './Doctor at Home.png';
+import NursingCare from './Specilized nursing care.jpeg';
+import NursingService from './Transactional Nursing service.png';
+import Physiotherapy from './physiotherapy.jpeg';
+import Vaccination from './vaccination.png';
 // WhatsApp Logo SVG
 const WhatsAppIcon = ({ size = 24, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -29,15 +34,15 @@ const App = () => {
   };
 
   const homeServices = [
-    { id: 'adv-nursing', title: 'Specialised & Advanced Nursing', img: 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=800', desc: 'Post-surgical care, critical care support, wound management, and chronic illness management.' },
-    { id: 'nursing-services', title: 'Nursing Services', img: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=800', desc: 'Round-the-clock (12/24 hrs) nursing care by trained and experienced nurses.' },
+    { id: 'adv-nursing', title: 'Specialised & Advanced Nursing', img:NursingCare, desc: 'Post-surgical care, critical care support, wound management, and chronic illness management.' },
+    { id: 'nursing-services', title: 'Nursing Services', img:NursingService, desc: 'Round-the-clock (12/24 hrs) nursing care by trained and experienced nurses.' },
     { id: 'transactional', title: 'Transactional services', img: 'https://images.pexels.com/photos/1250655/pexels-photo-1250655.jpeg?auto=compress&cs=tinysrgb&w=800', desc: 'Professional support including Injection Administration, IV Therapy, Ryle’s Tube Insertion, and Wound Dressing.' },
-    { id: 'doctor-visit', title: 'Doctor visit at Home', img: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800', desc: 'Comprehensive medical consultations conducted by qualified physicians in your home.' },
+    { id: 'doctor-visit', title: 'Doctor visit at Home', img: DocHome, desc: 'Comprehensive medical consultations conducted by qualified physicians in your home.' },
     { id: 'diagnostics', title: 'Diagnostics', img: 'https://images.pexels.com/photos/3845129/pexels-photo-3845129.jpeg?auto=compress&cs=tinysrgb&w=800', desc: 'Comprehensive diagnostic tests and health packages tailored for your well-being.' },
-    { id: 'bedside', title: 'Bedside Assistance', img: 'https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=800', desc: '24-hour attendants for elderly, post-operative, or bedridden patients.' },
-    { id: 'physio', title: 'Physiotherapy Services', img: 'https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=800', desc: 'Expert physiotherapy for recovery, pain management, and mobility improvement.' },
+    { id: 'bedside', title: 'Bedside Assistance',img: Bedside, desc: '24-hour attendants for elderly, post-operative, or bedridden patients.' },
+    { id: 'physio', title: 'Physiotherapy Services', img: Physiotherapy, desc: 'Expert physiotherapy for recovery, pain management, and mobility improvement.' },
     { id: 'equipment', title: 'Medical Equipment on Rent', img: 'https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=800', desc: 'Hospital beds, oxygen concentrators, BiPAP, and ICU setups delivered to your home.' },
-    { id: 'vaccine', title: 'Vaccine Administration', img: 'https://images.pexels.com/photos/5863389/pexels-photo-5863389.jpeg?auto=compress&cs=tinysrgb&w=800', desc: 'Safe vaccination services (flu, pneumonia, routine immunisations) at your doorstep.' },
+    { id: 'vaccine', title: 'Vaccine Administration', img: Vaccination, desc: 'Safe vaccination services (flu, pneumonia, routine immunisations) at your doorstep.' },
   ];
 
   const b2bServices = [
