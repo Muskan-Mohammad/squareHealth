@@ -10,7 +10,7 @@ import ShekarImg from './Shekar.jpg';
 import BilalImg from './Bilal.jpg';
 import Bedside from './Bedsideattendant.jpeg';
 import DocHome from './Doctor at Home.png';
-import NursingCare from './Specilaised nursing care.jpeg';
+import NursingCare from './Specialised nursing care.jpeg';
 import NursingService from './Transactional Nursing service.png';
 import Physiotherapy from './physiotherapy.jpeg';
 import Vaccination from './vaccination.png';
